@@ -86,7 +86,7 @@ export default function Hero() {
             style={{ background: 'rgba(0,212,255,0.08)', border: '1px solid rgba(0,212,255,0.25)' }}>
             <span className="w-2 h-2 rounded-full animate-pulse" style={{ background: 'var(--green)' }} />
             <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.65rem', color: 'var(--cyan)', letterSpacing: '0.12em' }}>
-              RECRUITING — FALL 2025
+              RECRUITING — FALL 2026
             </span>
           </div>
 
@@ -109,7 +109,7 @@ export default function Hero() {
             className="mb-8 max-w-md"
             style={{ fontSize: '1.05rem', color: 'var(--text-muted)', lineHeight: 1.7 }}>
             Learn ethical hacking, compete in CTFs, and build real-world security skills.
-            Open to all students — no experience required.
+            Open to all students. no experience required.
           </p>
 
           <div ref={ctaRef} className="flex flex-wrap gap-3">

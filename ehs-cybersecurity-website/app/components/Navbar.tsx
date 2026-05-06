@@ -51,22 +51,16 @@ export default function Navbar() {
     <>
       <nav
         ref={navRef}
-        className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+        className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-[#fafaf9] w-screen"
         style={{
-          background: scrolled ? 'rgba(4,13,26,0.95)' : 'transparent',
-          backdropFilter: scrolled ? 'blur(20px)' : 'none',
-          borderBottom: scrolled ? '1px solid rgba(26,58,107,0.5)' : 'none',
+          boxShadow: scrolled ? '0px 14px 50px -1px rgba(87,87,87,0.3)' : 'none'
         }}
       >
-        <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+        <div className="px-6 h-16 flex items-center justify-between">
           {/* Logo */}
           <a href="#" className="flex items-center gap-2 group">
             <div className="relative w-8 h-8">
               <Shield size={32} style={{ color: 'var(--cyan)' }} className="group-hover:drop-shadow-[0_0_8px_rgba(0,212,255,0.8)] transition-all" />
-              <span className="absolute inset-0 flex items-center justify-center"
-                style={{ fontFamily: 'var(--font-mono)', fontSize: '0.5rem', color: 'var(--bg)', fontWeight: 700 }}>
-                EHS
-              </span>
             </div>
             <div className="flex flex-col leading-none">
               <span style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: '0.9rem', color: 'var(--text)' }}>
@@ -79,7 +73,7 @@ export default function Navbar() {
           </a>
 
           {/* Desktop links */}
-          <div className="hidden md:flex items-center gap-1">
+          <div className="hidden md:flex items-center gap-12">
             {NAV_LINKS.map((link) => (
               <a
                 key={link.href}
@@ -105,7 +99,7 @@ export default function Navbar() {
           </div>
 
           {/* Admin / Login */}
-          <div className="hidden md:flex items-center gap-3">
+          <div className="hidden md:flex items-center">
             {isAdmin ? (
               <div className="flex items-center gap-2">
                 <span className="tag" style={{ color: 'var(--green)', borderColor: 'var(--green)', fontFamily: 'var(--font-mono)' }}>
@@ -159,8 +153,7 @@ export default function Navbar() {
 
         {/* Mobile menu */}
         {mobileOpen && (
-          <div className="md:hidden px-6 pb-6 pt-2 flex flex-col gap-2"
-            style={{ background: 'rgba(4,13,26,0.98)', borderBottom: '1px solid var(--border)' }}>
+          <div className="md:hidden px-6 pb-6 pt-2 flex flex-col gap-2">
             {NAV_LINKS.map(link => (
               <a key={link.href} href={link.href}
                 onClick={() => setMobileOpen(false)}

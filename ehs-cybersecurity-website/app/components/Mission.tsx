@@ -11,7 +11,7 @@ const MISSION_ITEMS = [
     icon: <Target size={28} />,
     title: 'Our Mission',
     color: 'var(--cyan)',
-    text: 'To empower every student at EHS with cybersecurity knowledge and skills — creating the next generation of defenders, builders, and leaders in digital security.',
+    text: 'To empower every student at EHS with cybersecurity knowledge and skills. Creating the next generation of defenders, builders, and leaders in digital security.',
   },
   {
     icon: <Eye size={28} />,
@@ -23,7 +23,7 @@ const MISSION_ITEMS = [
     icon: <Heart size={28} />,
     title: 'Our Values',
     color: '#ff88cc',
-    text: 'Inclusivity, ethics, and curiosity above all. We celebrate diversity in thought and background. Hacking is about problem-solving — not breaking things.',
+    text: 'Inclusivity, ethics, and curiosity above all. We celebrate diversity in thought and background. Hacking is about problem-solving, not breaking things.',
   },
 ];
 
@@ -112,7 +112,7 @@ export default function Mission() {
               <span style={{ color: 'var(--cyan)' }}>Thursday at 3:30 PM</span>
             </h3>
             <p className="mb-8 text-sm" style={{ color: 'var(--text-muted)', maxWidth: '500px', margin: '0 auto 2rem' }}>
-              Room 214 — Bring a laptop if you have one. No experience needed. Just curiosity.
+              Room 632 Bring a laptop if you have one. No experience needed. Just curiosity.
             </p>
             <a href="#join"
               className="inline-block px-8 py-3 rounded text-sm font-semibold transition-all"
