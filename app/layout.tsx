@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { AuthProvider } from "./contexts/authContext";
+import { EventsProvider } from "./contexts/eventsContext";
 
 export const metadata: Metadata = {
   title: "EHS Cybersecurity",
@@ -14,13 +16,17 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full">
       <body className="min-h-full flex flex-col">
-        {/* Custom cursor elements */}
-        <div id="cursor-dot" />
-        <div id="cursor-ring" />
+        {/* suppressHydrationWarning prevents mismatch errors from the cursor
+            script setting inline styles before React hydrates */}
+        <div id="cursor-dot" suppressHydrationWarning />
+        <div id="cursor-ring" suppressHydrationWarning />
 
-        {children}
+        <AuthProvider>
+          <EventsProvider>
+            {children}
+          </EventsProvider>
+        </AuthProvider>
 
-        {/* Custom cursor movement script */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -40,7 +46,6 @@ export default function RootLayout({
                   dot.style.top  = my + 'px';
                 });
 
-                // Smooth ring follow
                 (function loop() {
                   rx += (mx - rx) * 0.12;
                   ry += (my - ry) * 0.12;
@@ -49,20 +54,14 @@ export default function RootLayout({
                   requestAnimationFrame(loop);
                 })();
 
-                // Expand on hoverable elements
                 var hoverEls = 'a, button, [role="button"], input, textarea, select, label, [data-cursor-expand]';
                 document.addEventListener('mouseover', function(e) {
-                  if (e.target.closest(hoverEls)) {
-                    document.body.classList.add('cursor-expand');
-                  }
+                  if (e.target.closest(hoverEls)) document.body.classList.add('cursor-expand');
                 });
                 document.addEventListener('mouseout', function(e) {
-                  if (e.target.closest(hoverEls)) {
-                    document.body.classList.remove('cursor-expand');
-                  }
+                  if (e.target.closest(hoverEls)) document.body.classList.remove('cursor-expand');
                 });
 
-                // Hide when leaving window
                 document.addEventListener('mouseleave', function() {
                   dot.style.opacity  = '0';
                   ring.style.opacity = '0';

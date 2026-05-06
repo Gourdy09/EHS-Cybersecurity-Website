@@ -1,0 +1,217 @@
+{
+  "site": {
+    "title": "EHS Cybersecurity",
+    "description": "Student-led cybersecurity club at EHS"
+  },
+  "navbar": {
+    "clubName": "EHS CYBER",
+    "clubSubtitle": "SECURITY CLUB",
+    "links": [
+      { "href": "#about",   "label": "About" },
+      { "href": "#mission", "label": "Mission" },
+      { "href": "#wwc",     "label": "Women Who Code" },
+      { "href": "#events",  "label": "Events" },
+      { "href": "#calendar","label": "Calendar" },
+      { "href": "#join",    "label": "Join" }
+    ]
+  },
+  "hero": {
+    "recruitingBadge": "RECRUITING — FALL 2026",
+    "headline": ["EHS", "Cyber", "Security", "Club"],
+    "subtitle": "Learn ethical hacking, compete in CTFs, and build real-world security skills. Open to all students — no experience required.",
+    "ctaPrimary":   { "label": "JOIN THE CLUB", "href": "#join" },
+    "ctaSecondary": { "label": "VIEW EVENTS",   "href": "#events" },
+    "stats": [
+      { "value": "80+", "label": "Members" },
+      { "value": "12",  "label": "CTFs / Year" },
+      { "value": "#1",  "label": "State Ranking" }
+    ],
+    "terminalLines": [
+      { "type": "cmd",    "text": "whoami" },
+      { "type": "output", "text": "ehs_cyber_club", "color": "green" },
+      { "type": "cmd",    "text": "cat mission.txt" },
+      { "type": "typing", "text": "Defend. Hack. Secure." },
+      { "type": "cmd",    "text": "ls ./skills/" },
+      { "type": "skills", "items": ["ethical-hacking/", "cryptography/", "ctf-solving/", "network-sec/", "osint/", "web-exploit/"] },
+      { "type": "cmd",    "text": "nmap -sV localhost" }
+    ],
+    "floatingBadges": [
+      { "label": "Kali Linux" },
+      { "label": "CTF Ready" },
+      { "label": "Network Sec" }
+    ]
+  },
+  "about": {
+    "tagLabel": "ABOUT US",
+    "heading": "Why Join the EHS Cyber Club?",
+    "subheading": "Cybersecurity is one of the fastest-growing fields in tech — and you don't need to wait until college to get started. We're a student-led club that makes security skills accessible to everyone, regardless of background.",
+    "foundedText": "Founded in 2019, EHS Cybersecurity Club has grown from a handful of students to one of the largest tech clubs in the district. We meet weekly to learn, practice, and build skills that matter.",
+    "stats": [
+      { "num": "2019", "label": "Founded" },
+      { "num": "80+",  "label": "Active Members" },
+      { "num": "15+",  "label": "Competitions Won" },
+      { "num": "100%", "label": "Free to Join" }
+    ],
+    "pillars": [
+      {
+        "title": "Learn",
+        "desc": "Hands-on workshops in ethical hacking, malware analysis, and digital forensics taught by students and professionals.",
+        "color": "#00d4ff"
+      },
+      {
+        "title": "Compete",
+        "desc": "Represent EHS in Capture The Flag competitions, CyberPatriot, and national cybersecurity championships.",
+        "color": "#00ff88"
+      },
+      {
+        "title": "Build",
+        "desc": "Create real security tools, contribute to open source projects, and develop a portfolio that opens doors.",
+        "color": "#ffaa00"
+      },
+      {
+        "title": "Connect",
+        "desc": "Network with industry professionals, mentors, and a community of passionate students who share your interests.",
+        "color": "#ff88cc"
+      }
+    ]
+  },
+  "mission": {
+    "tagLabel": "OUR PURPOSE",
+    "heading": "What We Stand For",
+    "items": [
+      {
+        "title": "Our Mission",
+        "color": "#00d4ff",
+        "text": "To empower every student at EHS with cybersecurity knowledge and skills. Creating the next generation of defenders, builders, and leaders in digital security."
+      },
+      {
+        "title": "Our Vision",
+        "color": "#00ff88",
+        "text": "A future where every student graduates with the ability to protect themselves and others online. We believe security literacy is as important as reading and writing."
+      },
+      {
+        "title": "Our Values",
+        "color": "#ff88cc",
+        "text": "Inclusivity, ethics, and curiosity above all. We celebrate diversity in thought and background. Hacking is about problem-solving, not breaking things."
+      }
+    ],
+    "cta": {
+      "preText": "// READY TO LEVEL UP?",
+      "heading": "Meetings every Thursday at 3:30 PM",
+      "subtext": "Room 632. Bring a laptop if you have one. No experience needed. Just curiosity.",
+      "buttonLabel": "I'M INTERESTED →",
+      "buttonHref": "#join"
+    }
+  },
+  "wwc": {
+    "tagLabel": "WOMEN WHO CODE",
+    "heading": "Breaking Barriers in Cybersecurity",
+    "subheading": "Women are drastically underrepresented in cybersecurity — just 24% of the workforce. We're changing that, starting right here at EHS.",
+    "stats": [
+      { "val": "24%", "label": "Women in Cybersecurity" },
+      { "val": "3M+", "label": "Global Talent Gap" },
+      { "val": "$0",  "label": "Cost to Join" }
+    ],
+    "features": [
+      { "title": "Safe Space",    "desc": "A welcoming environment designed specifically to support women and non-binary students in tech." },
+      { "title": "Mentorship",    "desc": "Connect with women professionals in cybersecurity, software engineering, and tech leadership." },
+      { "title": "Networking",    "desc": "Build connections with peers and industry mentors who understand your experience." },
+      { "title": "Skill Workshops","desc": "Coding nights, resume reviews, and interview prep tailored for women entering tech." }
+    ],
+    "quotes": [
+      { "text": "\"This club showed me that cybersecurity isn't just for guys. I found my community here.\"", "name": "Sarah K., Junior" },
+      { "text": "\"The WWC events helped me land my first tech internship. The connections are real.\"",    "name": "Maya R., Senior" }
+    ],
+    "ctaLabel": "JOIN WWC CHAPTER"
+  },
+  "join": {
+    "tagLabel": "GET INVOLVED",
+    "heading": "Ready to Join?",
+    "subheading": "Membership is completely free. All skill levels welcome. Whether you're a complete beginner or an experienced hacker, there's a place for you here.",
+    "steps": [
+      {
+        "num": "01",
+        "title": "Show Up",
+        "desc": "Come to any Thursday meeting in Room 214 at 3:30 PM. No sign-up required for first visit."
+      },
+      {
+        "num": "02",
+        "title": "Sign the Roster",
+        "desc": "Fill out our simple membership form. Takes 2 minutes. Gets you on the email list."
+      },
+      {
+        "num": "03",
+        "title": "Start Learning",
+        "desc": "Jump into workshops, join a CTF team, and connect with the community right away."
+      }
+    ],
+    "contacts": [
+      { "label": "Email Us", "value": "ehscyberclub@school.edu", "color": "#00d4ff" },
+      { "label": "Discord",  "value": "discord.gg/ehscyber",      "color": "#5865F2" }
+    ],
+    "footerBadge": "100% FREE · NO EXPERIENCE NEEDED · ALL SKILL LEVELS WELCOME"
+  },
+  "events": {
+    "defaultEvents": [
+      {
+        "id": "1",
+        "title": "Capture The Flag — Spring 2025",
+        "description": "Compete in teams to solve cybersecurity challenges across web exploitation, cryptography, reverse engineering, and forensics.",
+        "date": "2025-05-15",
+        "time": "9:00 AM",
+        "location": "EHS Computer Lab B",
+        "category": "ctf",
+        "registrationLink": "#"
+      },
+      {
+        "id": "2",
+        "title": "Intro to Ethical Hacking",
+        "description": "Hands-on workshop covering Kali Linux basics, network scanning, and responsible disclosure.",
+        "date": "2025-05-22",
+        "time": "3:30 PM",
+        "location": "Room 214",
+        "category": "workshop"
+      },
+      {
+        "id": "3",
+        "title": "Women Who Code — Networking Night",
+        "description": "Connect with women professionals in cybersecurity and tech. Panel discussion, Q&A, and resume review.",
+        "date": "2025-06-03",
+        "time": "5:00 PM",
+        "location": "EHS Auditorium",
+        "category": "wwc",
+        "registrationLink": "#"
+      },
+      {
+        "id": "4",
+        "title": "Monthly Club Meeting",
+        "description": "General meeting: updates, upcoming competition prep, and member showcase.",
+        "date": "2025-05-08",
+        "time": "3:30 PM",
+        "location": "Room 214",
+        "category": "meeting"
+      },
+      {
+        "id": "5",
+        "title": "CyberPatriot Prep Session",
+        "description": "Practice rounds for the national CyberPatriot competition. Open to all skill levels.",
+        "date": "2025-06-12",
+        "time": "4:00 PM",
+        "location": "EHS Computer Lab A",
+        "category": "competition"
+      },
+      {
+        "id": "6",
+        "title": "Women Who Code — Beginner Coding Night",
+        "description": "A safe, supportive space to learn Python basics. No experience needed — laptops provided.",
+        "date": "2025-06-18",
+        "time": "3:30 PM",
+        "location": "Library Tech Room",
+        "category": "wwc"
+      }
+    ]
+  },
+  "admin": {
+    "password": "cyber2025"
+  }
+}
