@@ -1,13 +1,11 @@
-import { kv } from '@vercel/kv';
+import { Redis } from '@upstash/redis';
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
+const redis = Redis.fromEnv();
 const KEY = 'club:events';
 
-interface ClubEvent {
-  id: string;
-  [key: string]: unknown;
-}
+interface ClubEvent { id: string; [key: string]: unknown; }
 
 export async function PATCH(
   req: NextRequest,
@@ -15,9 +13,9 @@ export async function PATCH(
 ) {
   const { id } = await params;
   const body = await req.json();
-  const events = (await kv.get<ClubEvent[]>(KEY)) ?? [];
+  const events = (await redis.get<ClubEvent[]>(KEY)) ?? [];
   const updated = events.map(e => (e.id === id ? { ...e, ...body } : e));
-  await kv.set(KEY, updated);
+  await redis.set(KEY, updated);
   return NextResponse.json(updated.find(e => e.id === id));
 }
 
@@ -26,7 +24,7 @@ export async function DELETE(
   { params }: { params: Promise<{ id: string }> }
 ) {
   const { id } = await params;
-  const events = (await kv.get<ClubEvent[]>(KEY)) ?? [];
-  await kv.set(KEY, events.filter(e => e.id !== id));
+  const events = (await redis.get<ClubEvent[]>(KEY)) ?? [];
+  await redis.set(KEY, events.filter(e => e.id !== id));
   return NextResponse.json({ ok: true });
 }
