@@ -11,7 +11,7 @@ const d = siteData.join;
 
 const CONTACT_ICONS: Record<string, React.ReactNode> = {
   'Email Us': <Mail size={20} />,
-  'Discord':  <MessageCircle size={20} />,
+  'Discord': <MessageCircle size={20} />,
 };
 
 export default function Join() {
@@ -20,17 +20,21 @@ export default function Join() {
   useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.fromTo('.join-content',
-        { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 0.9, ease: 'power3.out',
-          scrollTrigger: { trigger: '.join-content', start: 'top 80%' } });
+        { opacity: 0, y: 50 }, {
+          opacity: 1, y: 0, duration: 0.9, ease: 'power3.out',
+        scrollTrigger: { trigger: '.join-content', start: 'top 80%' }
+      });
       gsap.fromTo('.join-step',
-        { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 0.6, ease: 'power2.out', stagger: 0.15,
-          scrollTrigger: { trigger: '.join-steps', start: 'top 85%' } });
+        { opacity: 0, x: -30 }, {
+          opacity: 1, x: 0, duration: 0.6, ease: 'power2.out', stagger: 0.15,
+        scrollTrigger: { trigger: '.join-steps', start: 'top 85%' }
+      });
     }, sectionRef);
     return () => ctx.revert();
   }, []);
 
   return (
-    <section id="join" ref={sectionRef} className="relative py-28 px-6">
+    <section id="join" ref={sectionRef} className="relative pt-28 pb-14 px-6">
       <div className="absolute inset-0 pointer-events-none"
         style={{ background: 'radial-gradient(ellipse at 50% 100%, rgba(0,212,255,0.06) 0%, transparent 60%)' }} />
 
@@ -92,6 +96,18 @@ export default function Join() {
             {d.footerBadge}
           </span>
         </div>
+      </div>
+      <div className="flex justify-center pt-14">
+        <span className="font-mono">
+          Made w/
+          <span className="text-red-500">
+            &nbsp;&lt;3&nbsp;
+          </span>
+          by&nbsp;
+          <a href="https://gourdy09.github.io" className="underline!">
+            Om Patel
+          </a>.
+        </span>
       </div>
     </section>
   );

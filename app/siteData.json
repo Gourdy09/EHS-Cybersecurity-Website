@@ -37,7 +37,7 @@
       "Security",
       "Club"
     ],
-    "subtitle": "Learn ethical hacking, compete in CTFs, and build real-world security skills. Open to all students — no experience required.",
+    "subtitle": "Learn ethical hacking, compete in CTFs, and build real-world security skills. Open to all students - no experience required.",
     "ctaPrimary": {
       "label": "JOIN THE CLUB",
       "href": "#join"
@@ -48,7 +48,7 @@
     },
     "stats": [
       {
-        "value": "80+",
+        "value": "0+",
         "label": "Members"
       },
       {
@@ -56,7 +56,7 @@
         "label": "CTFs / Year"
       },
       {
-        "value": "#1",
+        "value": "#0",
         "label": "State Ranking"
       }
     ],

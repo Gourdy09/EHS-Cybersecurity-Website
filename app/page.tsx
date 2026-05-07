@@ -13,12 +13,12 @@ export default function Home() {
     <div>
       <Navbar />
       <Hero />
-      <Mission/>
-      <About/>
-      <Events/>
-      <Calendar/>
-      <WeSTEM/>
-      <Join/>
+      <Mission />
+      <About />
+      <Events />
+      <Calendar />
+      <WeSTEM />
+      <Join />
     </div>
   );
 }
