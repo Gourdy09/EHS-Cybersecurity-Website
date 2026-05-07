@@ -316,7 +316,7 @@ export default function Events() {
                 </button>
                 <button type="submit"
                   className="flex-1 py-2.5 rounded text-sm font-semibold transition-all"
-                  style={{ background: 'var(--cyan)', color: 'var(--bg)', fontFamily: 'var(--font-mono)', letterSpacing: '0.06em' }}>
+                  style={{ background: 'var(--bg-2)', color: 'var(--text-muted)', border: '1px solid var(--border)', fontFamily: 'var(--font-mono)' }}>
                   {editingId ? 'UPDATE' : 'CREATE'} EVENT
                 </button>
               </div>
