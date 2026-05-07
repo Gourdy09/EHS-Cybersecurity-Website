@@ -7,36 +7,36 @@ import siteData from '../siteData.json';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const d = siteData.wwc;
+const d = siteData.westem;
 
-export default function WomenWhoCode() {
+export default function WeSTEM() {
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.fromTo('.wwc-header',
+      gsap.fromTo('.westem-header',
         { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out',
-          scrollTrigger: { trigger: '.wwc-header', start: 'top 85%' } });
-      gsap.fromTo('.wwc-feature',
+          scrollTrigger: { trigger: '.westem-header', start: 'top 85%' } });
+      gsap.fromTo('.westem-feature',
         { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out', stagger: 0.1,
-          scrollTrigger: { trigger: '.wwc-features', start: 'top 80%' } });
-      gsap.fromTo('.wwc-quote',
+          scrollTrigger: { trigger: '.westem-features', start: 'top 80%' } });
+      gsap.fromTo('.westem-quote',
         { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.6, ease: 'power2.out', stagger: 0.2,
-          scrollTrigger: { trigger: '.wwc-quotes', start: 'top 85%' } });
-      gsap.fromTo('.wwc-image',
+          scrollTrigger: { trigger: '.westem-quotes', start: 'top 85%' } });
+      gsap.fromTo('.westem-image',
         { opacity: 0, scale: 0.95 }, { opacity: 1, scale: 1, duration: 0.8, ease: 'power2.out',
-          scrollTrigger: { trigger: '.wwc-image', start: 'top 85%' } });
+          scrollTrigger: { trigger: '.westem-image', start: 'top 85%' } });
     }, sectionRef);
     return () => ctx.revert();
   }, []);
 
   return (
-    <section id="wwc" ref={sectionRef} className="relative py-28 px-6">
+    <section id="westem" ref={sectionRef} className="relative py-28 px-6">
       <div className="absolute inset-0 pointer-events-none"
         style={{ background: 'linear-gradient(135deg, rgba(255,136,204,0.03) 0%, transparent 50%)' }} />
 
       <div className="relative z-10 max-w-7xl mx-auto">
-        <div className="wwc-header flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+        <div className="westem-header flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
           <div>
             <div className="flex items-center gap-3 mb-4">
               <div className="h-px w-12" style={{ background: '#ff88cc' }} />
@@ -75,9 +75,9 @@ export default function WomenWhoCode() {
               </div>
             </div>
 
-            <div className="wwc-features flex flex-col gap-4 mb-8">
+            <div className="westem-features flex flex-col gap-4 mb-8">
               {d.features.map(f => (
-                <div key={f.title} className="wwc-feature flex gap-4 p-4 rounded-lg transition-all duration-200 cursor-default"
+                <div key={f.title} className="westem-feature flex gap-4 p-4 rounded-lg transition-all duration-200 cursor-default"
                   style={{ background: 'var(--bg-card)', border: '1px solid var(--border)' }}
                   onMouseEnter={e => (e.currentTarget as HTMLElement).style.borderColor = 'rgba(255,136,204,0.3)'}
                   onMouseLeave={e => (e.currentTarget as HTMLElement).style.borderColor = 'var(--border)'}>
@@ -100,7 +100,7 @@ export default function WomenWhoCode() {
           </div>
 
           <div className="flex flex-col gap-6">
-            <div className="wwc-image relative w-full aspect-[4/3] rounded-xl overflow-hidden"
+            <div className="westem-image relative w-full aspect-[4/3] rounded-xl overflow-hidden"
               style={{ border: '1px solid rgba(255,136,204,0.25)' }}>
               <div className="absolute inset-0 flex flex-col items-center justify-center gap-3"
                 style={{ background: 'linear-gradient(135deg, rgba(255,136,204,0.08), var(--bg-2))' }}>
@@ -118,9 +118,9 @@ export default function WomenWhoCode() {
               </div>
             </div>
 
-            <div className="wwc-quotes flex flex-col gap-4">
+            <div className="westem-quotes flex flex-col gap-4">
               {d.quotes.map(q => (
-                <div key={q.name} className="wwc-quote p-5 rounded-xl"
+                <div key={q.name} className="westem-quote p-5 rounded-xl"
                   style={{ background: 'var(--bg-card)', border: '1px solid rgba(255,136,204,0.15)' }}>
                   <p className="mb-3" style={{ fontSize: '0.88rem', color: 'var(--text-muted)', lineHeight: 1.6, fontStyle: 'italic' }}>{q.text}</p>
                   <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.65rem', color: '#ff88cc', letterSpacing: '0.06em' }}>— {q.name}</div>

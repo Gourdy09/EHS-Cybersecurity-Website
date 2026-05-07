@@ -5,7 +5,8 @@ import About from "./components/About";
 import Mission from "./components/Mission";
 import Events from "./components/Events";
 import Calendar from "./components/Calendar";
-import WomenWhoCode from "./components/WomenWhoCode";
+import WeSTEM from "./components/WeSTEM";
+import Join from "./components/Join";
 
 export default function Home() {
   return (
@@ -16,7 +17,8 @@ export default function Home() {
       <About/>
       <Events/>
       <Calendar/>
-      <WomenWhoCode/>
+      <WeSTEM/>
+      <Join/>
     </div>
   );
 }
