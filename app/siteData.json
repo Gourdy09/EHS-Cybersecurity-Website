@@ -111,6 +111,7 @@
     ]
   },
   "about": {
+    "imageUrl": "https://programs.miamioh.edu/wp-content/uploads/2023/11/cybersecurity.jpg",
     "tagLabel": "ABOUT US",
     "heading": "Why Join the EHS Cyber Club?",
     "subheading": "Cybersecurity is one of the fastest-growing fields in tech and you don't need to wait until college to get started. We're a student-led club that makes security skills accessible to everyone, regardless of background.",
@@ -185,6 +186,7 @@
     }
   },
   "westem": {
+    "imageUrl": "https://robertfsmith.org/wp-content/uploads/2024/07/Robert-f-Smith-org-New-Pathways-for-Women-in-STEM.jpg",
     "tagLabel": "WESTEM",
     "heading": "Women in STEM",
     "subheading": "WeSTEM works towards inspiring young girls to identify the flaws within the workplace in regards to gender inequality, by hearing the first-hand accounts of women in and pursuing STEM based fields.",

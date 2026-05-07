@@ -2,7 +2,7 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Sparkles, Star, ArrowRight, UserCheck } from 'lucide-react';
+import { Star, ArrowRight, UserCheck } from 'lucide-react';
 import siteData from '../siteData.json';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -102,14 +102,16 @@ export default function WeSTEM() {
           <div className="flex flex-col gap-6">
             <div className="westem-image relative w-full aspect-[4/3] rounded-xl overflow-hidden"
               style={{ border: '1px solid rgba(255,136,204,0.25)' }}>
-              <div className="absolute inset-0 flex flex-col items-center justify-center gap-3"
-                style={{ background: 'linear-gradient(135deg, rgba(255,136,204,0.08), var(--bg-2))' }}>
-                <Sparkles size={40} style={{ color: '#ff88cc', opacity: 0.6 }} />
-                <p style={{ fontFamily: 'var(--font-mono)', fontSize: '0.7rem', color: 'rgba(255,136,204,0.5)', textAlign: 'center' }}>
-                  📸 Women Who Code event photo<br />
-                  <span style={{ fontSize: '0.6rem', opacity: 0.7 }}>(Replace with real image)</span>
-                </p>
-              </div>
+              {d.imageUrl ? (
+                <img
+                  src={d.imageUrl}
+                  alt="WeSTEM event"
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+              ) : (
+                <div className="absolute inset-0"
+                  style={{ background: 'linear-gradient(135deg, rgba(255,136,204,0.08), var(--bg-2))' }} />
+              )}
               <div className="absolute top-3 left-3 w-6 h-6 border-t-2 border-l-2" style={{ borderColor: 'rgba(255,136,204,0.5)' }} />
               <div className="absolute bottom-3 right-3 w-6 h-6 border-b-2 border-r-2" style={{ borderColor: 'rgba(255,136,204,0.5)' }} />
               <div className="absolute top-4 right-4 px-3 py-1.5 rounded-full"

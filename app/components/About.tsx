@@ -61,17 +61,16 @@ export default function About() {
           <div className="image-placeholder">
             <div className="relative w-full aspect-video rounded-xl overflow-hidden"
               style={{ border: '1px solid var(--border)' }}>
-              <div className="absolute inset-0 flex flex-col items-center justify-center gap-3"
-                style={{ background: 'linear-gradient(135deg, var(--bg-card), var(--bg-2))' }}>
-                <div className="w-16 h-16 rounded-full flex items-center justify-center"
-                  style={{ background: 'rgba(0,212,255,0.1)', border: '1px solid var(--border-bright)' }}>
-                  <Users size={32} style={{ color: 'var(--cyan)' }} />
-                </div>
-                <p style={{ fontFamily: 'var(--font-mono)', fontSize: '0.7rem', color: 'var(--text-dim)', textAlign: 'center', maxWidth: '200px' }}>
-                  📸 Drop your club photo here<br />
-                  <span style={{ fontSize: '0.6rem' }}>(Replace with actual image)</span>
-                </p>
-              </div>
+              {d.imageUrl ? (
+                <img
+                  src={d.imageUrl}
+                  alt="EHS Cyber Club"
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+              ) : (
+                <div className="absolute inset-0"
+                  style={{ background: 'linear-gradient(135deg, var(--bg-card), var(--bg-2))' }} />
+              )}
               <div className="absolute top-3 left-3 w-6 h-6 border-t-2 border-l-2" style={{ borderColor: 'var(--cyan)' }} />
               <div className="absolute bottom-3 right-3 w-6 h-6 border-b-2 border-r-2" style={{ borderColor: 'var(--cyan)' }} />
             </div>
